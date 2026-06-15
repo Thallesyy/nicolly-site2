@@ -62,10 +62,10 @@ function openEasterEgg() {
   modal.innerHTML = `
     <div class="easter-egg-content">
       <div class="easter-egg-hearts">💖</div>
-      <p class="easter-egg-msg">Você achou o segredo 🤫<br><br>
-      Saiba que eu penso em você o tempo todo.<br>
-      Cada foto aqui tem um pedacinho do que eu sinto.<br><br>
-      Te amo, branquinha 💕</p>
+      <p class="easter-egg-msg">Achou ne <br><br>
+      Saiba que eu penso em você o tempo todo, tipo todo mesmo<br>
+      Tudo nesse site é so pra demonstrar um pouco do meu amor o nosso quantinho<br><br>
+      Eu Te amo, My beyhive 💕</p>
       <button class="easter-egg-close" onclick="document.getElementById('easterEggModal').remove()">Fechar ✕</button>
     </div>
   `;
