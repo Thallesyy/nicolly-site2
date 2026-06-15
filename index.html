@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#ff6b9d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Eu e você" />
+  <meta name="description" content="A minha declaração pra ela" />
+  <title>Eu e você</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192x192.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <base target="_blank">
+</head>
+
+<body>
+
+  <!-- ===== TELA DE SENHA ===== -->
+  <div class="password-screen" id="passwordScreen">
+    <div class="password-container">
+      <div class="password-icon">🔐</div>
+      <div class="password-title">Senha</div>
+      <div class="password-hint">Para acessar o site<br>Descubra a senha</div>
+      <input type="password" class="password-input" id="passwordInput" placeholder="••••••" maxlength="10">
+      <button class="password-btn" onclick="checkPassword()">Desbloquear</button>
+      <div class="password-error" id="passwordError">Senha incorreta... Tente novamente</div>
+    </div>
+  </div>
+
+  <!-- ===== CONTAINER DAS ANIMAÇÕES ===== -->
+  <div id="animationsContainer"></div>
+
+  <!-- ===== CONTROLE DE MÚSICA (TOPO) ===== -->
+  <div class="bg-music-control" id="bgMusicControl">
+    <button class="bg-music-btn" id="bgMusicBtn" onclick="toggleBgMusic()" title="Play/Pause música de fundo">🎵</button>
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="15" oninput="changeVolume(this.value)">
+    <span class="bg-music-label" id="bgMusicLabel">Música</span>
+  </div>
+
+  <!-- ===== APP PRINCIPAL ===== -->
+  <div class="app" id="mainApp">
+
+    <!-- Contador de tempo juntos -->
+    <section class="section">
+      <div class="section-card special">
+        <div class="section-header">Tempo juntos 💖</div>
+        <div class="section-body">
+          <div class="about-together">
+            <div class="about-together-label">Juntos há</div>
+            <div class="about-together-value" id="relationshipCounter">Calculando...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-title">
+        Tudo para minha beyhive
+        <span class="heart-beat">❤️</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-card">
+        <img class="hero-img" src="capa.jpg" alt="Nós dois" loading="eager" />
+        <div class="hero-overlay">
+          <p class="hero-sub">NOSSAAAAAA, nao tem jeito é os 01 do if</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre nós -->
+    <section class="section">
+      <div class="section-card about-card">
+        <div class="section-header">Sobre nós</div>
+        <div class="section-body about-body">
+          <img class="about-photo" src="sobre-nos.jpg" alt="Nossa foto" loading="lazy">
+          <div class="names">Thales e Nicolly vulgo T.N</div>
+          <div class="hint">Acho incrivel que tu nem tá a tanto tempo na minha vida e eu já queria que fosse para sempre</div>
+          <div class="text-box-container">
+            <div class="text-box-label">Escreva algo especial</div>
+            <textarea
+              class="text-box"
+              id="specialTextBox"
+              placeholder="Eu queria fazer tu fazer parte do site, entao, aqui tem um cantinho pra tu escrever o que tu quiser"
+              spellcheck="false"
+            ></textarea>
+            <div class="text-box-hint" id="saveHint">Salvo automaticamente</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recado especial -->
+    <section class="section">
+      <div class="section-card special">
+        <div class="section-header">Recado especial</div>
+        <div class="section-body">
+          <p class="special-text">Aqui vai a minha declaração</p>
+          <div class="msg-wrap" id="msgWrap">
+            <p class="msg" id="msgText">Nicolly, você é a pessoa mais incrível que eu já conheci. Obrigado por estar ao meu lado e por tornar cada dia mais especial, mas nao é so isso, todos os dias eu me apaixono mais e mais por quem tu é, e eu acho isso incrivel, o fato que msm quando eu acho que eu nao consigo gostar mais de ti mesmo assim eu gosto mais e mais e mais, eu nao consigo mais pensar em um dia sem voce, nao consigo mais imaginar um dia que eu nao queria  te ter, e eu fico ansioso todos os dias quando eu durmo pensando "q bom que eu vou ver ela amanha", as vezes quando nos tamo naquele momento so nosso eu penso "bem q poderia durar pra sempre ne", e eu realmente gostaria que durasse, eu quero todo os dias sentir o teu cheiro, sentir o teu calor, ver nos fundos do teus olhos e poder falar "eu te amo", e isso que eu quero, e eu nao tenho duvidas disso, pq oq tu faz eu sentir eu nunca senti na minha vida, e eu quero sentir isso mais e mais, eu espero fazer tu se sentir assim tambem, pq, vei, eu sou completamnete louco por ti. Mas as vezes eu penso eu não sou um romântico sabe? Eu sou só um homem apaixonado por uma princesa cujo cada detalhe é magnífico, cujo cada gesto é belo, cujo cada frase cada olhada cada andada, cada palavra é extraordinária, eu so sou um cara apaixonado por uma rainha, que cada segundo, cada minuto é cada hora demostra mais e mais a sua magnitude e beleza, eu sou so um cara apaixonado por uma deusa, que so de estar no mesmo ambiente muda tudo, que so de estar presente  mostra pra mim oque é se sentir vivo, mostra para mim oq é gostar de sentir um cheiro doce, mostra para mim oq eu preciso pra ter o meu "tudo" que eu tanto busquei é essa princesa, rainha e deusa não podia ser ninguém menos que você, essa linda leitora de Contos BIZARROS de medicina, que tem o olhar mais lindo que eu ja vi, que faz eu sentir o quão simples pode ser viver ao sei lado, que faz eu gostar até dos teus pequenos gestos, que me faz pensar que até as tuas imperfeições são tão perfeitas, que me faz querer acordar todo dia e ser melhor por você, e eu não sei quando comecei a me sentir assim, mas eu sei que eu amo isso eu amo te amar, muito obrigado por ser tão especial e incrível branquinha e muito obrigado por estar ao meu lado todos os dias, Nicolly Assunção Medina.</p>
+          </div>
+          <button class="btn" id="btnToggleMsg">Mostrar mensagem</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossos momentos -->
+    <section class="section">
+      <div class="section-card">
+        <div class="section-header">Nossos momentos</div>
+        <div class="grid">
+          <div class="tile" onclick="openAlbum('dates')">
+            <img src="album_dates_cover.jpg" alt="Fotos suas" loading="lazy">
+            <div class="tile-label">Fotos suas</div>
+          </div>
+          <div class="tile" onclick="openAlbum('random')">
+            <img src="album_random_cover.jpg" alt="Fotos aleatórias" loading="lazy">
+            <div class="tile-label">Fotos aleatórias</div>
+          </div>
+          <div class="tile" onclick="openAlbum('us')">
+            <img src="album_us_cover.jpg" alt="Nossas fotos" loading="lazy">
+            <div class="tile-label">Nossas fotos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /app -->
+
+  <!-- ===== PLAYER DE MÚSICA (SHEET) ===== -->
+  <div class="sheet" id="sheet">
+    <div class="sheet-handle" id="sheetHandle">
+      <div class="handle-bar"></div>
+    </div>
+    <div class="sheet-content">
+      <div class="song-row">
+        <img class="song-cover" id="songCover" src="capa1.jpg" alt="Capa" />
+        <div class="song-meta">
+          <p class="song-title"  id="songTitle">Pyramids</p>
+          <p class="song-artist" id="songArtist">Frank Ocean</p>
+        </div>
+        <button class="play-btn" id="playBtn">▶</button>
+      </div>
+      <div class="progress" id="progressBar">
+        <div id="progressFill"></div>
+      </div>
+      <div class="time-row">
+        <span id="curTime">0:00</span>
+        <span id="durTime">0:00</span>
+      </div>
+      <div class="playlist" id="playlist">
+        <div class="track" data-track="0">
+          <img src="capa1.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">Pyramids</p><p class="tartist">Frank Ocean</p></div>
+          <button class="badge">Play</button>
+        </div>
+        <div class="track" data-track="1">
+          <img src="capa2.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">Love Drought</p><p class="tartist">Beyoncé</p></div>
+          <button class="badge">Play</button>
+        </div>
+        <div class="track" data-track="2">
+          <img src="capa3.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">Best part</p><p class="tartist">Daniel Cesar</p></div>
+          <button class="badge">Play</button>
+        </div>
+        <div class="track" data-track="3">
+          <img src="capa4.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">All of me</p><p class="tartist">John Legend</p></div>
+          <button class="badge">Play</button>
+        </div>
+        <div class="track" data-track="4">
+          <img src="capa5.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">Essa aq é especial</p><p class="tartist">Thales</p></div>
+          <button class="badge">Play</button>
+        </div>
+        <div class="track" data-track="5">
+          <img src="capa6.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">Haunted</p><p class="tartist">Beyoncé</p></div>
+          <button class="badge">Play</button>
+        </div>
+        <div class="track" data-track="6">
+          <img src="capa7.jpg" alt="capa">
+          <div class="tmeta"><p class="tname">Dance for you</p><p class="tartist">Beyoncé</p></div>
+          <button class="badge">Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ÁUDIO ===== -->
+  <audio id="audio" preload="metadata"></audio>
+
+  <!-- ===== VISUALIZADOR DE FOTOS ===== -->
+  <div class="viewer" id="viewer">
+    <div class="viewer-top">
+      <div id="viewerCounter">1/7</div>
+      <button class="viewer-close" onclick="closeViewer()" aria-label="Fechar galeria">Fechar ✕</button>
+    </div>
+    <div class="stack" id="stack" onclick="nextPhoto()">
+      <img class="behind one" id="behind1" alt="">
+      <img class="behind two" id="behind2" alt="">
+      <img class="card-img front" id="frontImg" alt="Foto">
+    </div>
+    <div class="viewer-caption" id="viewerCaption"></div>
+    <div class="viewer-hint">Toque na foto para passar</div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <link rel="stylesheet" href="extras.css" />
+  <script type="module" src="script.js"></script>
+  <script type="module" src="extras.js"></script>
+
+</body>
+</html>
